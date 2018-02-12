@@ -1,0 +1,34 @@
+<h1>Countries Top Five Populations</h1>
+
+
+<h3> Population List: </h3>
+
+<div>
+	<table  class = "table">
+
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Capital</th>
+				<th>Population</th>\
+				<th>Area</th>
+				<th colspan = "3"></th>
+			</tr>
+		</thead>
+
+		
+
+			<tbody>
+				<% @states.each do |s| %>
+					<tr>
+						<td> <%= s.name %></td>
+						<td> <%= s.capital %></td>
+						<td> <%= s.population %> </td>
+						<td> <%= s.area %> </td>
+					</tr>
+				<%end %>
+			</tbody>
+
+
+	</table>
+</div>

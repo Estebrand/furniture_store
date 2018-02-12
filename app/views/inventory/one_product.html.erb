@@ -1,0 +1,13 @@
+<h1>One Product Page</h1>
+<p>Here is info about <%= @product.name %> </p>
+
+
+<div>
+	<p> Price: <%= number_to_currency (@product.price) %></p>
+	<p> Category: <%= @product.category %> </p>
+</div>
+<div class = "links">
+	<%= link_to 'All Products', all_product_path %>
+
+	<%= link_to 'Category', by_category_path(category: @product.category)%>
+</div>

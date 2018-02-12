@@ -1,0 +1,32 @@
+<h1>Inventory of all Products</h1>
+<p>Here is a list of all out products</p>
+
+<h3>Prduct List: </h3>
+
+<div>
+	<table  class = "table">
+
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Category</th>
+				<th colspan = "3"></th>
+			</tr>
+		</thead>
+			<tbody>
+				<% @products.each do |product| %>
+					<tr>
+						<td>	<%= link_to product.name, one_product_path(id:product.id) %></td>
+						
+						<td> <%= number_to_currency (product.price) %></td>
+
+						<td> <%= link_to product.category, by_category_path(category: product.category) %> </td>
+					</tr>
+				<%end %>
+			</tbody>
+
+
+	</table>
+</div>
+
